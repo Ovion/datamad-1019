@@ -30,5 +30,5 @@ Ejemplo: labs de clase.
     git status
 
 ## Merge
-1 - Ir a la rama donde queremos incorporar los cambios
-2 - Realizar el merge (opcionalmente resolviendo conflictos)
+- Ir a la rama donde queremos incorporar los cambios
+- Realizar el merge (opcionalmente resolviendo conflictos)
