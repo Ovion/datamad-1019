@@ -1,3 +1,5 @@
+# Comandos git
+
 ## Crear un repo git    
     git init
 ## Comitear los cambios en ficheros
@@ -9,3 +11,10 @@
 ## Revisar que el repositorio esta vinculado correctamente con github
     git remote -v
 
+# PR - Pull Request
+
+Cuando no puedas realizar un push porque no tienes permisos, haz una PR.
+Ejemplo: labs de clase.
+
+### Formato titulo PR
+`[lab-xxxx] <Nombre Completo>`
