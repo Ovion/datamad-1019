@@ -29,3 +29,6 @@ Ejemplo: labs de clase.
 ## Comprobar en que rama estoy
     git status
 
+
+MAS CODIGO
+
