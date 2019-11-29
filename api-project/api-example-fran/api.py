@@ -1,6 +1,8 @@
-import os
-from bottle import route, run, get, error
+from bottle import route, run, get, post, request
 import random
+from mongo import CollConection
+import bson
+
 
 
 @get("/")
@@ -26,13 +28,15 @@ def demo2(tipo):
             "chiste": "No puedorrr!!"
         }
 
+@post('/add')
+def add():
+    print(dict(request.forms))
+    autor=request.forms.get("autor")
+    chiste=request.forms.get("chiste")  
+    return {
+        "inserted_doc": str(coll.addChiste(autor,chiste))}
 
-@error(404)
-def error404(error):
-    return {'error': 'oops'}
 
+coll=CollConection('Prueba','datamad1019')
+run(host='0.0.0.0', port=8080)
 
-port = int(os.getenv("PORT", 8080))
-print(f"Running server {port}....")
-
-run(host="0.0.0.0", port=port, debug=True)
