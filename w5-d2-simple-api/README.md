@@ -20,7 +20,7 @@
 
 3. Then deploy the app with:
 3.1. `heroku create <app_name>`
-3.2. `heroku container:push api --app <app_name>`
-3.3. `heroku container:release api --app <app_name>`
+3.2. `heroku container:push web --app <app_name>`
+3.3. `heroku container:release web --app <app_name>`
 
 4. Open heroku control panel in the website and change environment variables in settings tab.
