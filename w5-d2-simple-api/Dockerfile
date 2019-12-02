@@ -1,10 +1,13 @@
-FROM python:3-alpine
+FROM python:3.7-slim
 
-ADD . .
+# Copy the contents of the current directory inside the docker image
+ADD . /app
 
-RUN pip3 install -r requirements.txt
+# Set the home of the docker image
+WORKDIR /app
 
-RUN adduser -D myuser
-USER myuser 
+# Install the requirements 
+RUN pip3 install -r requirements.txt 
 
+# Command to run when starting the container
 CMD ["python3","-u","app.py"]
